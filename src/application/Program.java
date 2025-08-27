@@ -2,6 +2,7 @@ package application;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.Dao.DaoFactory;
 import model.Dao.VendedorDao;
@@ -11,6 +12,8 @@ import model.entities.Vendedor;
 public class Program {
 
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
 		
 		Departamento dpt = new Departamento (1, "Jamalbee");
 		Vendedor vend = new Vendedor(21,"marcao","marcao@postin",new Date(),2000.00,dpt);
@@ -48,6 +51,15 @@ public class Program {
 		
 		System.out.println("Update Completo");
 		
+		
+		
+		 System.out.println("\n === Teste 6- vendedor Update  ===");
+		System.out.println("Entre com o ID da linha a ser deletada: ");
+		int id = sc.nextInt();
+		venderDao.deleteById(id);
+		System.out.println("Linha deletada !!");
+		
+		sc.close();
 		
 	}
 
