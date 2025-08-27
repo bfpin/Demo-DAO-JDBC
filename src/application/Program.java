@@ -35,6 +35,13 @@ public class Program {
 		for (Vendedor obj : lista) {
 		System.out.println(obj);
 		}
+		
+		System.out.println("\n === Teste 4 - vendedor insert  ===");
+		Vendedor newVendedor = new Vendedor (null, "Marrone","maronim@gmail.com",new Date(),4000.00,departamento);
+	    venderDao.insert(newVendedor);
+	    
+	    System.out.println("Inserido ! Novo id =  "+ newVendedor.getId());
+			
 	}
 
 }
